@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h1>{{ character['Character'] }}</h1>
+	<h2>{{character['Alias']}}</h2>
+
+	<img class="right" src="{{ url_for('static', filename='images/'+character['Image']) }}" alt="Character art">
+
+
+	<p>{{character['Character']}} is a {{character['Alignment']}} operating in {{character['Base-of-operations']}} in the DC Comics Universe first appearing in {{character['First-appearance']}}. {{character['Character']}}'s real identity is {{character['Real-name']}} who is {{character['Occupation']}}.</p>
+	<p>Powers: {{character['Powers']}}</p>
+
+	<p><a href="{{ character['URL'] }}">View official character page entry for {{ character['Character'] }}.</a></p>
+
+	<p><a href="{{ url_for('index') }}">Return to the list</a> to view another character.</p>
+
+{% endblock %}
