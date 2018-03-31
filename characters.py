@@ -15,7 +15,7 @@ def index():
     pairs_list = zip(ids_list, char_list)
     return render_template('index.html', pairs=pairs_list, the_title="DC Directory of Characters")
 
-@app.route('/char/<num>')
+@app.route('/char/<num>.html')
 def detail(num):
     for character in characters_list:
         if character['ID'] == num:

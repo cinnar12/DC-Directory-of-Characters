@@ -4,7 +4,7 @@
 
 <h1>DC Character Directory</h1>
 
-<p>Select a character from a category below.</p>
+<p>Select a character below.</p>
 
 <!-- pairs is a list that must be sent here by a route function
      The list will contain 45 pairs -->
@@ -15,7 +15,7 @@
 
     <ul>
     {% for pair in pairs %}
-        <li><a href="/char/{{ pair[0] }}">{{ pair[1] }}</a></li>
+        <li><a href="/dcdc/char/{{ pair[0] }}.html">{{ pair[1] }}</a></li>
     {% endfor %}
     </ul>
 
